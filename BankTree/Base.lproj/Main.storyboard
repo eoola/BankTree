@@ -91,34 +91,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BWd-ug-e0K">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
+                        <collectionViewLayout key="collectionViewLayout" id="mTr-1l-0uV"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="bRr-kz-Mpe" customClass="LessonCategoryCollectionViewCell" customModule="BankTree" customModuleProvider="target">
-                                <rect key="frame" x="3" y="0.0" width="408" height="128"/>
+                                <rect key="frame" x="3" y="0.0" width="408" height="145"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Qr0-Nd-p5D">
-                                    <rect key="frame" x="0.0" y="0.0" width="408" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="408" height="145"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kc3-qo-faG">
-                                            <rect key="frame" x="183" y="53.5" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="EJf-ZU-nRI">
+                                            <rect key="frame" x="20" y="20" width="368" height="105"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="113" translatesAutoresizingMaskIntoConstraints="NO" id="ArM-l7-H2f">
+                                                    <rect key="frame" x="67" y="0.0" width="234.5" height="80"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Swift_logo" translatesAutoresizingMaskIntoConstraints="NO" id="EDP-fl-sjp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="80" id="ZWy-Xz-cNm"/>
+                                                                <constraint firstAttribute="width" constant="80" id="bcr-y5-bwu"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kc3-qo-faG">
+                                                            <rect key="frame" x="193" y="30" width="41.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.14901960784313725" green="0.16470588235294117" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aaC-vo-ZFB">
+                                                    <rect key="frame" x="30" y="101" width="308" height="4"/>
+                                                    <color key="progressTintColor" red="1" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </progressView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aaC-vo-ZFB" firstAttribute="leading" secondItem="EJf-ZU-nRI" secondAttribute="leading" constant="30" id="02Y-xs-JXE"/>
+                                                <constraint firstAttribute="trailing" secondItem="aaC-vo-ZFB" secondAttribute="trailing" constant="30" id="f5r-tn-CeO"/>
+                                            </constraints>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="kc3-qo-faG" firstAttribute="centerX" secondItem="Qr0-Nd-p5D" secondAttribute="centerX" id="6jo-Ck-57T"/>
-                                        <constraint firstItem="kc3-qo-faG" firstAttribute="centerY" secondItem="Qr0-Nd-p5D" secondAttribute="centerY" id="WgG-vg-AiC"/>
+                                        <constraint firstAttribute="trailing" secondItem="EJf-ZU-nRI" secondAttribute="trailing" constant="20" id="0GW-Bh-ZXq"/>
+                                        <constraint firstItem="EJf-ZU-nRI" firstAttribute="leading" secondItem="Qr0-Nd-p5D" secondAttribute="leading" constant="20" id="iCd-pA-NBp"/>
+                                        <constraint firstItem="EJf-ZU-nRI" firstAttribute="centerY" secondItem="Qr0-Nd-p5D" secondAttribute="centerY" id="ics-Tw-2gU"/>
+                                        <constraint firstItem="EJf-ZU-nRI" firstAttribute="centerX" secondItem="Qr0-Nd-p5D" secondAttribute="centerX" id="m7S-dA-FVd"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="contentView.layer.cornerRadius">
+                                            <integer key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="contentView.layer.borderWidth">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </collectionViewCellContentView>
-                                <color key="backgroundColor" red="0.38431372549019605" green="0.51372549019607838" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="customSize" width="408" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="customSize" width="408" height="145"/>
                                 <connections>
                                     <outlet property="label" destination="kc3-qo-faG" id="o8O-fo-coI"/>
                                 </connections>
@@ -155,6 +185,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Swift_logo" width="385" height="340"/>
         <image name="books.vertical" catalog="system" width="128" height="103"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">

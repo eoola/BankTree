@@ -19,6 +19,7 @@ class LessonCategoriesCollectionViewController: UICollectionViewController {
                          "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire",
                          "New Jersey", "New Mexico", "New York"]
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,19 +28,23 @@ class LessonCategoriesCollectionViewController: UICollectionViewController {
     }
     
     private func generateLayout() -> UICollectionViewLayout {
-        let spacing: CGFloat = 10
+        let spacing: CGFloat = 20
         
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(70.0))
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: spacing, bottom: 0, trailing: spacing)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(120.0))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         
         let section = NSCollectionLayoutSection(group: group)
         
-        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: spacing, bottom: 0, trailing: spacing)
+        section.interGroupSpacing = spacing
+        
+        group.contentInsets = NSDirectionalEdgeInsets(top: spacing, leading: spacing, bottom: 0, trailing: spacing)
         
         let layout = UICollectionViewCompositionalLayout(section: section)
         
@@ -75,6 +80,7 @@ class LessonCategoriesCollectionViewController: UICollectionViewController {
         
         // Configure the cell
         cell.label.text = items[indexPath.item]
+        cell.layer.cornerRadius = 5.0
         
         return cell
     }
