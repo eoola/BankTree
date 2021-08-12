@@ -11,13 +11,24 @@ private let reuseIdentifier = "Cell"
 
 class LessonCategoriesCollectionViewController: UICollectionViewController {
     
+    private let items = ["Alabama", "Alaska", "Arizona", "Arkansas", "California",
+                         "Colorado", "Connecticut", "Delaware", "Florida",
+                         "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
+                         "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland",
+                         "Massachusetts", "Michigan", "Minnesota", "Mississippi",
+                         "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire",
+                         "New Jersey", "New Mexico", "New York"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "Welcome!"
         collectionView.setCollectionViewLayout(generateLayout(), animated: false)
     }
     
     private func generateLayout() -> UICollectionViewLayout {
+        let spacing: CGFloat = 10
+        
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -27,6 +38,8 @@ class LessonCategoriesCollectionViewController: UICollectionViewController {
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         
         let section = NSCollectionLayoutSection(group: group)
+        
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: spacing, bottom: 0, trailing: spacing)
         
         let layout = UICollectionViewCompositionalLayout(section: section)
         
@@ -45,21 +58,23 @@ class LessonCategoriesCollectionViewController: UICollectionViewController {
     
     // MARK: UICollectionViewDataSource
     
+    /*
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
+ */
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return items.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! LessonCategoryCollectionViewCell
         
         // Configure the cell
+        cell.label.text = items[indexPath.item]
         
         return cell
     }

@@ -71,6 +71,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="RVv-7W-Tfu">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="ovS-PH-4XI" kind="relationship" relationship="rootViewController" id="LF1-fj-I8p"/>
@@ -114,8 +117,11 @@
                                         <constraint firstItem="kc3-qo-faG" firstAttribute="centerY" secondItem="Qr0-Nd-p5D" secondAttribute="centerY" id="WgG-vg-AiC"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <color key="backgroundColor" red="0.38431372549019605" green="0.51372549019607838" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="customSize" width="408" height="128"/>
+                                <connections>
+                                    <outlet property="label" destination="kc3-qo-faG" id="o8O-fo-coI"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -153,9 +159,6 @@
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
