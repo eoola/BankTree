@@ -105,22 +105,29 @@
                                             <rect key="frame" x="20" y="20" width="368" height="105"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="113" translatesAutoresizingMaskIntoConstraints="NO" id="ArM-l7-H2f">
-                                                    <rect key="frame" x="67" y="0.0" width="234.5" height="80"/>
+                                                    <rect key="frame" x="17.5" y="0.0" width="333" height="80"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-paycheque-50" translatesAutoresizingMaskIntoConstraints="NO" id="EDP-fl-sjp">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit" translatesAutoresizingMaskIntoConstraints="NO" id="EDP-fl-sjp">
                                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="80" id="ZWy-Xz-cNm"/>
                                                                 <constraint firstAttribute="width" constant="80" id="bcr-y5-bwu"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kc3-qo-faG">
-                                                            <rect key="frame" x="193" y="30" width="41.5" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checking Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kc3-qo-faG">
+                                                            <rect key="frame" x="193" y="30" width="140" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="140" id="Hnc-HR-kwU"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.14901960784313725" green="0.16470588235294117" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="EDP-fl-sjp" firstAttribute="centerY" secondItem="ArM-l7-H2f" secondAttribute="centerY" id="2cN-j6-2n1"/>
+                                                        <constraint firstItem="kc3-qo-faG" firstAttribute="leading" secondItem="EDP-fl-sjp" secondAttribute="trailing" constant="113" id="9Hf-1A-Z3X"/>
+                                                    </constraints>
                                                 </stackView>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aaC-vo-ZFB">
                                                     <rect key="frame" x="30" y="101" width="308" height="4"/>
@@ -323,7 +330,7 @@
     </scenes>
     <resources>
         <image name="books.vertical" catalog="system" width="128" height="103"/>
-        <image name="icons8-paycheque-50" width="50" height="50"/>
+        <image name="credit" width="100" height="100"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
