@@ -14,8 +14,8 @@ class CategoriesCollectionViewController: UICollectionViewController {
     private let items = [Topic(name: "Checking Account", image: "check"),
                          Topic(name: "Savings Account", image: "saving"),
                          Topic(name: "Credit", image: "credit"),
-                         Topic(name: "Loan", image: "house"),
-                         Topic(name: "Stock", image: "stock")
+                         Topic(name: "Loans", image: "house"),
+                         Topic(name: "Stocks", image: "stock")
     
     ]
     

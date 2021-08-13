@@ -96,7 +96,7 @@ class QuizViewController: UIViewController, UITableViewDelegate, UITableViewData
         } else {
             //alert
             
-            let alert = UIAlertController(title: "Incorrect", message: "Try Again", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Incorrect 🥲", message: "Try Again", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
             present(alert, animated: true)
         }
