@@ -40,21 +40,21 @@ class QuizViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     private func setUpQuestions() {
-        quizModels.append(QuizQuestion(text: "What is 2 + 2?",
-                                       answers: [Answer(text: "1", isCorrect: false),
-                                                 Answer(text: "2", isCorrect: false),
-                                                 Answer(text: "4", isCorrect: true),
-                                                 Answer(text: "5", isCorrect: false)]))
-        quizModels.append(QuizQuestion(text: "What is 2 + 0?",
-                                       answers: [Answer(text: "1", isCorrect: false),
-                                                 Answer(text: "2", isCorrect: true),
-                                                 Answer(text: "4", isCorrect: false),
-                                                 Answer(text: "5", isCorrect: false)]))
-        quizModels.append(QuizQuestion(text: "What is 2 + 3?",
-                                       answers: [Answer(text: "1", isCorrect: false),
-                                                 Answer(text: "2", isCorrect: false),
-                                                 Answer(text: "4", isCorrect: false),
-                                                 Answer(text: "5", isCorrect: true)]))
+        quizModels.append(QuizQuestion(text: "Which of the following is not something you use a checking account for?",
+                                       answers: [Answer(text: "Long term savings", isCorrect: true),
+                                                 Answer(text: "Daily expenses", isCorrect: false),
+                                                 Answer(text: "ATM Withdrawls", isCorrect: true),
+                                                 Answer(text: "Debit cards", isCorrect: false)]))
+        quizModels.append(QuizQuestion(text: "What do you need to enter when using your debit card?",
+                                       answers: [Answer(text: "FDIC", isCorrect: false),
+                                                 Answer(text: "PIN", isCorrect: true),
+                                                 Answer(text: "APP", isCorrect: false),
+                                                 Answer(text: "CAR", isCorrect: false)]))
+        quizModels.append(QuizQuestion(text: "What do you need when you are under 18 to open a checking account?",
+                                       answers: [Answer(text: "Driver's license", isCorrect: false),
+                                                 Answer(text: "A job", isCorrect: false),
+                                                 Answer(text: "A parent/legal guardian", isCorrect: true),
+                                                 Answer(text: "A car", isCorrect: false)]))
         
     }
     
