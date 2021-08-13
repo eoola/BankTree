@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LessonCategoryCollectionViewCell: UICollectionViewCell {
+class CategoryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var label: UILabel!
     

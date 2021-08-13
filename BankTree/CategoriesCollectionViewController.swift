@@ -1,5 +1,5 @@
 //
-//  LessonCategoriesCollectionViewController.swift
+//  CategoriesCollectionViewController.swift
 //  BankTree
 //
 //  Created by Emmanuel Ola on 8/12/21.
@@ -9,7 +9,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class LessonCategoriesCollectionViewController: UICollectionViewController {
+class CategoriesCollectionViewController: UICollectionViewController {
     
     private let items = ["Alabama", "Alaska", "Arizona", "Arkansas", "California",
                          "Colorado", "Connecticut", "Delaware", "Florida",
@@ -23,7 +23,7 @@ class LessonCategoriesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Welcome!"
+        navigationItem.title = "Let's Learn Banking!"
         collectionView.setCollectionViewLayout(generateLayout(), animated: false)
     }
     
@@ -36,7 +36,7 @@ class LessonCategoriesCollectionViewController: UICollectionViewController {
         
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: spacing, bottom: 0, trailing: spacing)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(120.0))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(150.0))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         
@@ -76,7 +76,7 @@ class LessonCategoriesCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! LessonCategoryCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CategoryCollectionViewCell
         
         // Configure the cell
         cell.label.text = items[indexPath.item]
