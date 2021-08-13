@@ -107,7 +107,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="113" translatesAutoresizingMaskIntoConstraints="NO" id="ArM-l7-H2f">
                                                     <rect key="frame" x="67" y="0.0" width="234.5" height="80"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Swift_logo" translatesAutoresizingMaskIntoConstraints="NO" id="EDP-fl-sjp">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-paycheque-50" translatesAutoresizingMaskIntoConstraints="NO" id="EDP-fl-sjp">
                                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="80" id="ZWy-Xz-cNm"/>
@@ -322,8 +322,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Swift_logo" width="385" height="340"/>
         <image name="books.vertical" catalog="system" width="128" height="103"/>
+        <image name="icons8-paycheque-50" width="50" height="50"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

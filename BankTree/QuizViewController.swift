@@ -27,8 +27,6 @@ class QuizViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-    
-    
     private func configureUI(question: QuizQuestion){
         label.text = question.text
         currentQuesiton = question
