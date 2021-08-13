@@ -89,7 +89,7 @@ class CategoriesCollectionViewController: UICollectionViewController {
         
         // Configure the cell
         cell.label.text = items[indexPath.item].name
-        cell.layer.cornerRadius = 5.0
+        cell.layer.cornerRadius = 20.0
         cell.image.image = UIImage(named: items[indexPath.item].image)!
         cell.progress.progress = items[indexPath.item].progress
         
