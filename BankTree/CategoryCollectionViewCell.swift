@@ -11,5 +11,6 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var label: UILabel!
     @IBOutlet var image: UIImageView!
+    @IBOutlet var progress: UIProgressView!
     
 }

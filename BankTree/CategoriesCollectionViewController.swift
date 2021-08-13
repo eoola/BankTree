@@ -11,11 +11,11 @@ private let reuseIdentifier = "Cell"
 
 class CategoriesCollectionViewController: UICollectionViewController {
     
-    private let items = [Topic(name: "Checking Account", image: "check"),
-                         Topic(name: "Savings Account", image: "saving"),
-                         Topic(name: "Credit", image: "credit"),
-                         Topic(name: "Loans", image: "house"),
-                         Topic(name: "Stocks", image: "stock")
+    private let items = [Topic(name: "Checking Account", image: "check", progress: 0.2),
+                         Topic(name: "Savings Account", image: "saving", progress: 0.4),
+                         Topic(name: "Credit", image: "credit", progress:  0.1),
+                         Topic(name: "Loans", image: "house", progress: 0.7),
+                         Topic(name: "Stocks", image: "stock", progress: 0.9)
     
     ]
     
@@ -75,6 +75,10 @@ class CategoriesCollectionViewController: UICollectionViewController {
     }
  */
     
+    @IBAction func unwindFromQuizToCategories (unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
@@ -87,6 +91,7 @@ class CategoriesCollectionViewController: UICollectionViewController {
         cell.label.text = items[indexPath.item].name
         cell.layer.cornerRadius = 5.0
         cell.image.image = UIImage(named: items[indexPath.item].image)!
+        cell.progress.progress = items[indexPath.item].progress
         
         return cell
     }
