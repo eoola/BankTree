@@ -43,7 +43,7 @@ class QuizViewController: UIViewController, UITableViewDelegate, UITableViewData
         quizModels.append(QuizQuestion(text: "Which of the following is not something you use a checking account for?",
                                        answers: [Answer(text: "Long term savings", isCorrect: true),
                                                  Answer(text: "Daily expenses", isCorrect: false),
-                                                 Answer(text: "ATM Withdrawls", isCorrect: true),
+                                                 Answer(text: "ATM Withdrawls", isCorrect: false),
                                                  Answer(text: "Debit cards", isCorrect: false)]))
         quizModels.append(QuizQuestion(text: "What do you need to enter when using your debit card?",
                                        answers: [Answer(text: "FDIC", isCorrect: false),
@@ -88,7 +88,9 @@ class QuizViewController: UIViewController, UITableViewDelegate, UITableViewData
                 else{
                     //end of game
                     let alert = UIAlertController(title: "Done", message: "Quiz Completed", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                    alert.addAction(UIAlertAction(title: "Done", style: .cancel, handler: {_ in
+                        
+                    }))
                     present(alert, animated: true)
                     
                 }
