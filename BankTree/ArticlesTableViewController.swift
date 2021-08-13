@@ -25,6 +25,8 @@ class ArticlesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    //@IBSegueAction func addArticleDetailView(_ coder: NSCoder, sender: Any?) ->
 
     // MARK: - Table view data source
 
@@ -35,6 +37,14 @@ class ArticlesTableViewController: UITableViewController {
     }
  */
 
+    @IBSegueAction func showArticle(_ coder: NSCoder, sender: Any?) -> ArticleDetailViewController? {
+        guard let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) else {return nil}
+        
+        let title = items[indexPath.row].title
+        
+        return ArticleDetailViewController(coder, title: title)
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return items.count

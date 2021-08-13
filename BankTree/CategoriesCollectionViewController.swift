@@ -28,7 +28,7 @@ class CategoriesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Let's Learn Banking!"
+        navigationItem.title = "Let's Learn Finance!"
         collectionView.setCollectionViewLayout(generateLayout(), animated: false)
     }
     
