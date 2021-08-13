@@ -11,10 +11,18 @@ private let reuseIdentifier = "Cell"
 
 class CategoriesCollectionViewController: UICollectionViewController {
     
-    private let items = ["Checking Account", "Savings Account", "Credit", "Loans", "Interest",
-                         "Investing", "Stocks", "Retirement Plans"
+    private let items = [Topic(name: "Checking Account", image: "check"),
+                         Topic(name: "Savings Account", image: "saving"),
+                         Topic(name: "Credit", image: "credit"),
+                         Topic(name: "Loan", image: "house"),
+                         Topic(name: "Stock", image: "stock")
     
     ]
+    
+    /**
+     "Savings Account", "Credit", "Loans", "Interest",
+                          "Investing", "Stocks", "Retirement Plans"
+     */
     
     
     override func viewDidLoad() {
@@ -76,8 +84,9 @@ class CategoriesCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CategoryCollectionViewCell
         
         // Configure the cell
-        cell.label.text = items[indexPath.item]
+        cell.label.text = items[indexPath.item].name
         cell.layer.cornerRadius = 5.0
+        cell.image.image = UIImage(named: items[indexPath.item].image)!
         
         return cell
     }
